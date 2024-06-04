@@ -16,7 +16,7 @@ function changeFontSize() {
     editor.refresh();
 }
 
-document.getElementById("run").click(()=> {
+document.getElementById("run").addEventListener("click", ()=> {
     Sk.execLimit = 60 * 1000;
     var code = editor.getValue();
     document.getElementById("output-content").innerText = "";  // 이전 출력 내용 초기화
@@ -44,6 +44,6 @@ document.getElementById("run").click(()=> {
     });
 });
 
-document.getElementById("stop").click(()=> {
+document.getElementById("stop").addEventListener("click", ()=> {
     Sk.execLimit = 0; // 코드 실행 중지
 });
