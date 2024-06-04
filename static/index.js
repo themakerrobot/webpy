@@ -7,7 +7,7 @@ window.onload = function() {
         matchBrackets: true,
         theme: "monokai"
     });
-    editor.getWrapperElement().style.fontSize = 20px;
+    editor.getWrapperElement().style.fontSize = "20px";
     
     function changeFontSize() {
         var fontSize = document.getElementById("font-size").value + "px";
