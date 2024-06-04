@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #e9ecef;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,13 +22,14 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: #343a40;
 }
 
 .container {
     display: flex;
-    background: white;
+    background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: calc(100% - 80px); /* Adjusted height to account for the title and padding */
 }
@@ -55,27 +56,29 @@ h1 {
 
 .CodeMirror {
     flex: 1;
-    border: 1px solid #ddd;
+    border: 1px solid #ced4da;
     border-radius: 4px;
 }
 
 button {
-    background-color: #f4de3d;
+    background-color: #007bff;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    color: #ffffff;
     margin-right: 10px;
 }
 
 button:hover {
-    background-color: #f4d85a;
+    background-color: #0056b3;
     font-weight: bold;
 }
 
 #font-size-container label {
     margin-right: 10px;
+    color: #495057;
 }
 
 #output-title {
@@ -83,12 +86,13 @@ button:hover {
     text-align: left;
     margin: 0;
     font-size: 24px;
+    color: #343a40;
 }
 
-#output, #mycanvas {
-    background: #f8f8f8;
+#output, #turtle {
+    background: #f8f9fa;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ced4da;
     border-radius: 4px;
     flex: 1;
     overflow-y: auto;
