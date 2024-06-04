@@ -37,7 +37,7 @@ window.onload = function() {
         Sk.misceval.asyncToPromise(function () {
             return Sk.importMainWithBody("<stdin>", false, code, true);
         }).then(function (mod) {
-            document.getElementById("output-content").innerText += '\n\nOk';
+            document.getElementById("output-content").innerText += '\n\nEnd.';
         }).catch(function (err) {
             document.getElementById("output-content").innerText = err.toString();
         });
