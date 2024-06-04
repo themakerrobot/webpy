@@ -15,7 +15,7 @@ function changeFontSize() {
     editor.refresh();
 }
 
-function executePython() {
+document.getElementById("run").click(()=> {
     Sk.execLimit = 60 * 1000;
     var code = editor.getValue();
     document.getElementById("output-content").innerText = "";  // 이전 출력 내용 초기화
@@ -43,7 +43,7 @@ function executePython() {
     });
 }
 
-function stopExecution() {
+document.getElementById("stop").click(()=> {
     Sk.execLimit = 0; // 코드 실행 중지
 }
 
