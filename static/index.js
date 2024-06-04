@@ -9,6 +9,7 @@ window.onload = function() {
     });
     editor.getWrapperElement().style.fontSize = "20px";
 };
+
 function changeFontSize() {
     var fontSize = document.getElementById("font-size").value + "px";
     editor.getWrapperElement().style.fontSize = fontSize;
@@ -41,9 +42,8 @@ document.getElementById("run").click(()=> {
     }).catch(function (err) {
         document.getElementById("output-content").innerText = err.toString();
     });
-}
+});
 
 document.getElementById("stop").click(()=> {
     Sk.execLimit = 0; // 코드 실행 중지
-}
-
+});
