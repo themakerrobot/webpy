@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 2000px;
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1500px;
+    height: 80vh; /* Adjusted height to account for the title */
+}
+.editor-container, .output-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.controls div {
+    display: flex;
+    align-items: center;
+}
+.CodeMirror {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    background-color: #f4de3d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+button:hover {
+    background-color: #f4d85a;
+    font-weight: bold;
+}
+#font-size-container label {
+    margin-right: 10px;
+}
+#output-title {
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    font-size: 24px;
+}
+#output, #mycanvas {
+    background: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+}
