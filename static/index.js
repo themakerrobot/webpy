@@ -31,7 +31,7 @@ window.onload = function() {
             }
         });
     
-        (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+        (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'turtle';
     
         Sk.misceval.asyncToPromise(function () {
             return Sk.importMainWithBody("<stdin>", false, code, true);
