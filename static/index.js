@@ -45,4 +45,4 @@ window.onload = function() {
     function stopExecution() {
         Sk.execLimit = 0; // 코드 실행 중지
     }
-});
+};
