@@ -18,7 +18,7 @@ window.onload = function() {
     document.getElementById("run").addEventListener("click", ()=> {
         Sk.execLimit = 60 * 1000;
         var code = editor.getValue();
-        document.getElementById("output-content").innerText = "";  // 이전 출력 내용 초기화
+        document.getElementById("output-content").innerText = new Date().toString() + '\n\n';
     
         Sk.configure({
             output: function (text) {
@@ -37,7 +37,7 @@ window.onload = function() {
         Sk.misceval.asyncToPromise(function () {
             return Sk.importMainWithBody("<stdin>", false, code, true);
         }).then(function (mod) {
-            document.getElementById("output-content").innerText += '\n\nEnd.';
+            document.getElementById("output-content").innerText += '\n\n종료';
         }).catch(function (err) {
             document.getElementById("output-content").innerText = err.toString();
         });
