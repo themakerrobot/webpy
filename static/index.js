@@ -14,8 +14,10 @@ window.onload = function() {
         editor.getWrapperElement().style.fontSize = fontSize;
         editor.refresh();
     }
-    if (Sk.builtin) {
-    console.log("Skulpt version:", Sk.builtin.version);
+if (Sk.VERSION) {
+    console.log("Skulpt version:", Sk.VERSION);
+} else {
+    console.log("Skulpt version information not available");
 }
     document.getElementById("run").addEventListener("click", ()=> {
         Sk.execLimit = 60 * 1000;
