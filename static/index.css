@@ -1,13 +1,11 @@
-body {
-    font-family: Arial, sans-serif, "Fira Code", "Consolas", "Roboto Mono", "Courier New", monospace;;
-    justify-content: center;
-    align-items: center;
-    widht: 100%;
-    height: 100%;
-    background-color: #f0f0f0;
+body, html {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif, "Fira Code", "Consolas", "Roboto Mono", "Courier New", monospace;;
     box-sizing: border-box;
+    color: #333; /* 글씨 색상 변경 */
 }
 /* 링크 스타일 */
 a:link,
