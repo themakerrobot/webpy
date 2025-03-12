@@ -1,11 +1,33 @@
 window.onload = function() {
+
+    let fullscreen = false;
+    $('#fullscreen_txt').html(
+      fullscreen?
+      '<i class="fa-solid fa-minimize"></i>':
+      '<i class="fa-solid fa-maximize"></i>'
+    );
+    
+    $('#fullscreen_bt').on('click', ()=>{
+      if (!fullscreen && document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+        fullscreen=true;
+        $('#fullscreen_txt').html('<i class="fa-solid fa-minimize fa-xl"></i>');
+      }
+      else if (fullscreen && document.exitFullscreen) {
+        document.exitFullscreen();
+        fullscreen=false;
+        $('#fullscreen_txt').html('<i class="fa-solid fa-maximize fa-xl"></i>');
+      }
+      else {}
+    });
+    
     // Codemirror 초기화
     var editor = CodeMirror.fromTextArea(document.getElementById("python-code"), {
         mode: { name: "python", version: 3, singleLineStringErrors: false },
         lineNumbers: true,
         indentUnit: 4,
         matchBrackets: true,
-        theme: "monokai"
+        theme: "cobalt"
     });
     editor.getWrapperElement().style.fontSize = "20px";
 
