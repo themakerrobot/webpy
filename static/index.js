@@ -1,24 +1,35 @@
 window.onload = function() {
-
     let fullscreen = false;
-    $('#fullscreen_txt').html(
-      fullscreen?
-      '<i class="fa-solid fa-minimize"></i>':
-      '<i class="fa-solid fa-maximize"></i>'
-    );
-    
-    $('#fullscreen_bt').on('click', ()=>{
+
+    const fullscreenTxt = document.getElementById('fullscreen_txt');
+    const fullscreenBt = document.getElementById('fullscreen_bt');
+
+    const updateIcon = () => {
+      fullscreenTxt.innerHTML = fullscreen 
+        ? '<i class="fa-solid fa-minimize fa-xl"></i>'
+        : '<i class="fa-solid fa-maximize fa-xl"></i>';
+    };
+
+    updateIcon(); // 초기 아이콘 설정
+
+    fullscreenBt.addEventListener('click', (e) => {
+      e.preventDefault(); // <a> 태그 기본 동작 방지
+      
       if (!fullscreen && document.documentElement.requestFullscreen) {
         document.documentElement.requestFullscreen();
-        fullscreen=true;
-        $('#fullscreen_txt').html('<i class="fa-solid fa-minimize fa-xl"></i>');
-      }
-      else if (fullscreen && document.exitFullscreen) {
+        fullscreen = true;
+      } else if (fullscreen && document.exitFullscreen) {
         document.exitFullscreen();
-        fullscreen=false;
-        $('#fullscreen_txt').html('<i class="fa-solid fa-maximize fa-xl"></i>');
+        fullscreen = false;
       }
-      else {}
+      
+      updateIcon();
+    });
+
+    // 사용자가 ESC 등으로 fullscreen 종료했을 때 아이콘 동기화
+    document.addEventListener('fullscreenchange', () => {
+      fullscreen = !!document.fullscreenElement;
+      updateIcon();
     });
     
     // Codemirror 초기화
