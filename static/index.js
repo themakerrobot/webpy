@@ -6,8 +6,8 @@ window.onload = function() {
 
     const updateIcon = () => {
       fullscreenTxt.innerHTML = fullscreen 
-        ? '<i class="fa-solid fa-minimize fa-xl"></i>'
-        : '<i class="fa-solid fa-maximize fa-xl"></i>';
+        ? '창화면'
+        : '전체화면';
     };
 
     updateIcon(); // 초기 아이콘 설정
