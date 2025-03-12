@@ -1,17 +1,6 @@
 window.onload = function() {
     let fullscreen = false;
-
-    const fullscreenTxt = document.getElementById('fullscreen_txt');
     const fullscreenBt = document.getElementById('fullscreen_bt');
-
-    const updateIcon = () => {
-      fullscreenTxt.innerHTML = fullscreen 
-        ? '창화면'
-        : '전체화면';
-    };
-
-    updateIcon(); // 초기 아이콘 설정
-
     fullscreenBt.addEventListener('click', (e) => {
       e.preventDefault(); // <a> 태그 기본 동작 방지
       
@@ -22,14 +11,11 @@ window.onload = function() {
         document.exitFullscreen();
         fullscreen = false;
       }
-      
-      updateIcon();
     });
 
     // 사용자가 ESC 등으로 fullscreen 종료했을 때 아이콘 동기화
     document.addEventListener('fullscreenchange', () => {
       fullscreen = !!document.fullscreenElement;
-      updateIcon();
     });
     
     // Codemirror 초기화
