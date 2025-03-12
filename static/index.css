@@ -9,6 +9,18 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+/* 링크 스타일 */
+a:link,
+a:visited {
+  color: #0896d9;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #0896d9;
+  cursor: pointer;
+}
 
 .wrapper {
     display: flex;
